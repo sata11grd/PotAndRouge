@@ -34,3 +34,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+PotAndRouge/Assets/Plugins
+PotAndRouge/Assets/Plugins.meta
