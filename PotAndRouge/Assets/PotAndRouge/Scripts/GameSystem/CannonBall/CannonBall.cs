@@ -21,6 +21,7 @@ namespace PotAndRouge.GameSystem.CannonBall
         [OdinSerialize] int DestroyTriggerCount { get; set; } = 5;
         [OdinSerialize, ReadOnly] int WallHitCount { get; set; }
         [OdinSerialize] float Duration { get; set; } = 5f;
+        [OdinSerialize] GameObject HitParticle { get; set; }
 
         float m_TimeElapsed;
 
@@ -29,7 +30,7 @@ namespace PotAndRouge.GameSystem.CannonBall
             var obj = FindObjectOfType<Cache.GameCache>();
             obj.GetComponent<Cache.GameCache>().IncreaseScore(Holder, enemy.GetComponent<Enemy.Status>().Score);
 
-            Destroy(enemy);
+            enemy.GetComponent<Enemy.GetHitHandler>().GetHit(HitParticle);
         }
 
         void OnTrigger()
