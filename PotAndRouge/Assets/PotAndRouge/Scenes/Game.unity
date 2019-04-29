@@ -889,7 +889,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: Duration
       Entry: 4
-      Data: 120
+      Data: 10
     - Name: OnTimeElapsed
       Entry: 7
       Data: 0|UnityEngine.Events.UnityEvent, UnityEngine.CoreModule
@@ -1260,7 +1260,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!114 &688569853
 MonoBehaviour:
@@ -1671,7 +1671,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: m_Text
       Entry: 1
-      Data: "\n\u6700\u5F8C\u306E\u6F14\u51FA\u306F\u3001\n\u753B\u9762\u306E\u30B7\u30A7\u30A4\u30AF\uFF06\u6575\u306E\u6D88\u6EC5\uFF06\u306C\u3044\u3050\u308B\u307F\u306E\u4F4D\u7F6E\u8ABF\u6574\uFF06\u30AB\u30E1\u30E9\u8868\u793A&\u30D5\u30A7\u30FC\u30C9\u30A2\u30A6\u30C8\u3067\u30B7\u30FC\u30F3\u9077\u79FB\n\n\u30FB\u30DE\u30FC\u30B8\uFF08\u30B7\u30FC\u30F3\u9077\u79FB\u306E\u5B8C\u6210\uFF09\n\u30FB\u97F3\u3092\u3064\u3051\u308B"
+      Data: "\n\u30FB\u30DE\u30FC\u30B8\uFF08\u30B7\u30FC\u30F3\u9077\u79FB\u306E\u5B8C\u6210\uFF09\n\u30FB\u97F3\u3092\u3064\u3051\u308B"
 --- !u!1 &1009433656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,7 +3215,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_TargetDisplay: 0
 --- !u!114 &1818415333
 MonoBehaviour:
