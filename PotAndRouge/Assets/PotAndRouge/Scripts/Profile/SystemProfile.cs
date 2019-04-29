@@ -17,5 +17,6 @@ namespace PotAndRouge.Profile
         [OdinSerialize] public string PlayerLayerName { get; private set; } = "Player";
         [OdinSerialize] public string WallLayerName { get; private set; } = "Wall";
         [OdinSerialize] public string EnemyLayerName { get; private set; } = "Enemy";
+        [OdinSerialize] public string CannonBallLayerName { get; private set; } = "CannonBall";
     }
 }

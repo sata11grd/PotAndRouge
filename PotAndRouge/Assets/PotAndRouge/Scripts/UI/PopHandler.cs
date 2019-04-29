@@ -16,11 +16,14 @@ namespace PotAndRouge.UI
         [Title("Required")]
         [OdinSerialize, Required] PopCanvas PopCanvas { get; set; }
 
+        [Title("Settings")]
+        [OdinSerialize] DB.PlayerInfo PlayerInfo { get; set; }
+
         [Button("Pop")]
         public void Pop(PopCanvas.POP_TYPE popType, string text)
         {
             PopCanvas.ChangePopType(popType);
-            PopCanvas.ChangeText(text);
+            PopCanvas.ChangeText("【" + PlayerInfo.Name + "】\n「" + text + "」");
             PopCanvas.gameObject.SetActive(true);
         }
     }

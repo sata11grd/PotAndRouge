@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8115785835224565963}
   - component: {fileID: 8115785835224565961}
   - component: {fileID: 8115785835224565960}
-  - component: {fileID: 2584581894719353252}
-  m_Layer: 0
+  - component: {fileID: 3238817586296509599}
+  m_Layer: 12
   m_Name: Cannon Ball (Rouge)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 330f2a34e6ea1c74495fd582ad6df4f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9413feca54fa7fa4b98ef0309c379670, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,6 +123,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1adcd8d7add6a684c92b865d856a0f2b, type: 2}
     - {fileID: 11400000, guid: de823953aeb8f5449b52fda60c4c2948, type: 2}
     - {fileID: 1812881953744270, guid: ed0c022a338d3384d9ee622d354a94e2, type: 3}
+    - {fileID: 1564421980168344, guid: 49c4f7c3ff489ac41bd6e80536ae23c5, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -146,8 +147,11 @@ MonoBehaviour:
     - Name: HitParticle
       Entry: 10
       Data: 2
---- !u!61 &2584581894719353252
-BoxCollider2D:
+    - Name: SubParticle
+      Entry: 10
+      Data: 3
+--- !u!60 &3238817586296509599
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -159,7 +163,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -169,9 +173,14 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.2}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.12, y: 0.099999994}
+      - {x: -0.21, y: 0}
+      - {x: -0.25, y: -0.049999997}
+      - {x: -0.25, y: -0.099999994}
+      - {x: 0.25, y: -0.099999994}
+      - {x: 0.25, y: 0.099999994}
 --- !u!1001 &7210846065839684978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,10 +188,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8115785835224565962}
     m_Modifications:
-    - target: {fileID: 198776, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
-      propertyPath: m_Name
-      value: Effect7
-      objectReference: {fileID: 0}
     - target: {fileID: 415794, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -227,6 +232,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198776, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Name
+      value: Effect7
+      objectReference: {fileID: 0}
+    - target: {fileID: 198776, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 11420126, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
       propertyPath: MeshObject
       value: 
@@ -242,6 +255,26 @@ PrefabInstance:
     - target: {fileID: 11420126, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
       propertyPath: Color.b
       value: 0.03773582
+      objectReference: {fileID: 0}
+    - target: {fileID: 190390, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 140132, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 158122, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618235430697534, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 131736, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}

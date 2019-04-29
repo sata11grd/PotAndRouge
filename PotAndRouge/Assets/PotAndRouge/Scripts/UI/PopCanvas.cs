@@ -102,7 +102,6 @@ namespace PotAndRouge.UI
         private void OnDisable()
         {
             RectTransform.localScale = InitialScale;
-            RectTransform.position = InitialPosition;
         }
 
         private void Update()

@@ -32,6 +32,8 @@ namespace PotAndRouge.GameSystem.Player
         [OdinSerialize] Vector3 ShotForce { get; set; }
         [OdinSerialize] Vector3 MaxShotForce { get; set; }
         [OdinSerialize] float MaxScaleMag { get; set; } = 3f;
+        [OdinSerialize] float MinMass { get; set; } = 1f;
+        [OdinSerialize] float MaxMass { get; set; } = 10f;
 
         [Title("Reference")]
         [OdinSerialize] Transform CannonBallsRoot { get; set; }
@@ -71,6 +73,7 @@ namespace PotAndRouge.GameSystem.Player
             {
                 var obj = Instantiate(CannonBall);
                 obj.transform.position = transform.position;
+                obj.GetComponent<Rigidbody2D>().mass = Mathf.Lerp(MinMass, MaxMass, m_ChargedTime / MaxChargeTime);
                 obj.GetComponent<Rigidbody2D>().AddForce(Lerp(ShotForce, MaxShotForce, m_ChargedTime / MaxChargeTime));
                 obj.transform.parent = CannonBallsRoot;
 

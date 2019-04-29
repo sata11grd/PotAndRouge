@@ -22,6 +22,7 @@ namespace PotAndRouge.GameSystem.CannonBall
         [OdinSerialize, ReadOnly] int WallHitCount { get; set; }
         [OdinSerialize] float Duration { get; set; } = 5f;
         [OdinSerialize] GameObject HitParticle { get; set; }
+        [OdinSerialize] GameObject SubParticle { get; set; }
 
         float m_TimeElapsed;
 
@@ -47,11 +48,22 @@ namespace PotAndRouge.GameSystem.CannonBall
             if (collision.gameObject.layer == LayerMask.NameToLayer(SystemProfile.EnemyLayerName))
             {
                 OnEnemyHit(collision.gameObject);
+                return;
             }
 
             if (collision.gameObject.layer == LayerMask.NameToLayer(SystemProfile.WallLayerName))
             {
                 WallHitCount++;
+                return;
+            }
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.layer == LayerMask.NameToLayer(SystemProfile.CannonBallLayerName))
+            {
+                var obj = Instantiate(SubParticle);
+                obj.transform.position = transform.position;
             }
         }
 

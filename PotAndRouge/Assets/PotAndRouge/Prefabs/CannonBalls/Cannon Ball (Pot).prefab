@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8115785835224565961}
   - component: {fileID: 8115785835224565974}
   - component: {fileID: 8115785835224565960}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cannon Ball (Pot)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 69ccca0f3f8233a44a330dbe6f489d79, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ce9dbc7b56001224397060781dbe3693, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -139,6 +139,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9f709a6659c74c046a248d7bff33af42, type: 2}
     - {fileID: 11400000, guid: de823953aeb8f5449b52fda60c4c2948, type: 2}
     - {fileID: 1347330118340980, guid: a270d4b31a4d11a4b8302acf069f853a, type: 3}
+    - {fileID: 1564421980168344, guid: 49c4f7c3ff489ac41bd6e80536ae23c5, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -162,6 +163,9 @@ MonoBehaviour:
     - Name: HitParticle
       Entry: 10
       Data: 2
+    - Name: SubParticle
+      Entry: 10
+      Data: 3
 --- !u!1001 &9135998808180993284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -169,10 +173,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8115785835224565962}
     m_Modifications:
-    - target: {fileID: 198776, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
-      propertyPath: m_Name
-      value: Effect7
-      objectReference: {fileID: 0}
     - target: {fileID: 415794, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -217,10 +217,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198776, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Name
+      value: Effect7
+      objectReference: {fileID: 0}
+    - target: {fileID: 198776, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 11420126, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
       propertyPath: MeshObject
       value: 
       objectReference: {fileID: 8115785835224565975}
+    - target: {fileID: 190390, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 140132, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 158122, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1618235430697534, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 131736, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 822652a44bf2a2d4eb421e65ea2e5465, type: 3}
 --- !u!4 &9135998808180880694 stripped
