@@ -9,13 +9,11 @@ using UnityEngine.SceneManagement;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 
-namespace PotAndRouge.Util
+namespace PotAndRouge.UI
 {
-    public class GameObjectCleaner : SerializedMonoBehaviour
+    public interface IChargeInfo
     {
-        private void OnTriggerEnter2D(Collider2D collider)
-        {
-            Destroy(collider.gameObject);
-        }
+        float ChagedAmount();
+        float MaxChageAmount();
     }
 }

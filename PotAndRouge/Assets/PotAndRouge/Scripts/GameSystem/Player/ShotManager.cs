@@ -11,8 +11,18 @@ using Sirenix.Serialization;
 
 namespace PotAndRouge.GameSystem.Player
 {
-    public class ShotManager : SerializedMonoBehaviour
+    public class ShotManager : SerializedMonoBehaviour, UI.IChargeInfo
     {
+        float UI.IChargeInfo.ChagedAmount()
+        {
+            return m_ChargedTime;
+        }
+
+        float UI.IChargeInfo.MaxChageAmount()
+        {
+            return MaxChargeTime;
+        }
+
         [Title("Required")]
         [OdinSerialize, Required] DB.PlayerInfo PlayerInfo { get; set; }
 
