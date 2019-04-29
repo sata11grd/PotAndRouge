@@ -27,9 +27,13 @@ namespace PotAndRouge.GameSystem.CannonBall
 
         void OnEnemyHit(GameObject enemy)
         {
-            var obj = FindObjectOfType<Cache.GameCache>();
-            obj.GetComponent<Cache.GameCache>().IncreaseScore(Holder, enemy.GetComponent<Enemy.Status>().Score);
+            var cache = FindObjectOfType<Cache.GameCache>();
+            if (cache == null) throw new System.Exception("GameCache could not be found.");
 
+            var status = enemy.GetComponent<Enemy.Status>();
+            if (status == null) throw new System.Exception("Enemy status could not be found.");
+
+            cache.IncreaseScore(Holder, status.Score);
             enemy.GetComponent<Enemy.GetHitHandler>().GetHit(HitParticle);
         }
 

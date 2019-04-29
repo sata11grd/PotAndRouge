@@ -13,7 +13,7 @@ namespace PotAndRouge.Cache
 {
     public class GameCache : SerializedMonoBehaviour
     {
-        [OdinSerialize] public Dictionary<DB.PlayerInfo, uint> Scores { protected get; set; } = new Dictionary<DB.PlayerInfo, uint>();
+        [OdinSerialize] public Dictionary<DB.PlayerInfo, uint> Scores { get; private set; } = new Dictionary<DB.PlayerInfo, uint>();
 
         public void IncreaseScore(DB.PlayerInfo playerInfo, uint score)
         {

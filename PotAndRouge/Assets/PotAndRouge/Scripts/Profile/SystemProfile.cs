@@ -14,6 +14,7 @@ namespace PotAndRouge.Profile
     [CreateAssetMenu(fileName = "SystemProfile", menuName = "PotAndRouge/Profile/SystemProfile")]
     public class SystemProfile : SerializedScriptableObject
     {
+        [OdinSerialize] public string PlayerLayerName { get; private set; } = "Player";
         [OdinSerialize] public string WallLayerName { get; private set; } = "Wall";
         [OdinSerialize] public string EnemyLayerName { get; private set; } = "Enemy";
     }
