@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PotAndRouge/Scenes/Game.unity
     guid: 55f58c278fb0a5d49af8db7ba628ea29
+  - enabled: 1
+    path: Assets/PotAndRouge/Scenes/Epilogue.unity
+    guid: 45e13440ae3a7e2429cecde2400cce81
   m_configObjects: {}

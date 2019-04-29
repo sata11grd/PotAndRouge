@@ -27,12 +27,17 @@ namespace PotAndRouge.GameSystem.Doll
         [OdinSerialize] DB.PlayerInfo LeftPlayerInfo { get; set; }
         [OdinSerialize] DB.PlayerInfo RightPlayerInfo { get; set; }
 
+        private void OnDisable()
+        {
+            myRigidbody2D.velocity = Vector3.zero;
+        }
+
         // Start is called before the first frame update
         void Start()
         {
-            centerXpos = Camera.main.transform.position.x;
+            centerXpos = UnityEngine.Camera.main.transform.position.x;
             Vector3 leftTop;
-            leftTop = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, Camera.main.transform.position.z));
+            leftTop = UnityEngine.Camera.main.ScreenToWorldPoint(new Vector3(0, 0, UnityEngine.Camera.main.transform.position.z));
             xOffsetRange = centerXpos - leftTop.x;
             myRigidbody2D = GetComponent<Rigidbody2D>();
             positionY = transform.position.y;

@@ -15,7 +15,7 @@ namespace PotAndRouge.Util
     {
         private void Awake()
         {
-            var worldHeight = Camera.main.orthographicSize * 2f;
+            var worldHeight = UnityEngine.Camera.main.orthographicSize * 2f;
             var worldWidth = worldHeight / Screen.height * Screen.width;
             transform.localScale = new Vector3(worldWidth, worldHeight);
         }
