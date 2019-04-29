@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/PotAndRouge/Scenes/Initialization.unity
+    guid: 3156de2b0659a1b4eabd9bf13b5400ef
+  - enabled: 1
+    path: Assets/PotAndRouge/Scenes/Game.unity
+    guid: 55f58c278fb0a5d49af8db7ba628ea29
   m_configObjects: {}

@@ -854,7 +854,7 @@ MonoBehaviour:
     SerializationNodes:
     - Name: m_Text
       Entry: 1
-      Data: "\u4ECA\u65E5\u306F\u30B7\u30FC\u30F3\u9077\u79FB\u3068\u30D5\u30A7\u30FC\u30C9\u7BA1\u7406\u3001\u521D\u671F\u5316\u30B7\u30FC\u30F3\u306E\u8FFD\u52A0\n\n\u97F3\u306F\u6700\u5F8C\u306B\u3064\u3051\u308B"
+      Data: "\n\u97F3\u306F\u6700\u5F8C\u306B\u3064\u3051\u308B"
 --- !u!1 &1009433656
 GameObject:
   m_ObjectHideFlags: 0
