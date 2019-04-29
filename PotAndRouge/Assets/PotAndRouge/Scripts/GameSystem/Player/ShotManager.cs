@@ -11,8 +11,18 @@ using Sirenix.Serialization;
 
 namespace PotAndRouge.GameSystem.Player
 {
-    public class ShotManager : SerializedMonoBehaviour
+    public class ShotManager : SerializedMonoBehaviour, UI.IChargeInfo
     {
+        float UI.IChargeInfo.ChagedAmount()
+        {
+            return m_ChargedTime;
+        }
+
+        float UI.IChargeInfo.MaxChageAmount()
+        {
+            return MaxChargeTime;
+        }
+
         [Title("Required")]
         [OdinSerialize, Required] DB.PlayerInfo PlayerInfo { get; set; }
 
@@ -21,6 +31,7 @@ namespace PotAndRouge.GameSystem.Player
         [OdinSerialize] float MaxChargeTime { get; set; } = 3f;
         [OdinSerialize] Vector3 ShotForce { get; set; }
         [OdinSerialize] Vector3 MaxShotForce { get; set; }
+        [OdinSerialize] float MaxScaleMag { get; set; } = 3f;
 
         [Title("Reference")]
         [OdinSerialize] Transform CannonBallsRoot { get; set; }
@@ -62,6 +73,9 @@ namespace PotAndRouge.GameSystem.Player
                 obj.transform.position = transform.position;
                 obj.GetComponent<Rigidbody2D>().AddForce(Lerp(ShotForce, MaxShotForce, m_ChargedTime / MaxChargeTime));
                 obj.transform.parent = CannonBallsRoot;
+
+                var scale = Mathf.Lerp(1f, MaxScaleMag, m_ChargedTime / MaxChargeTime);
+                obj.transform.localScale *= scale;
 
                 m_RemainingShotCoolTime = ShotCoolTime;
                 m_ChargedTime = 0f;

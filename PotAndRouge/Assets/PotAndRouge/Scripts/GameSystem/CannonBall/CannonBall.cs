@@ -21,15 +21,20 @@ namespace PotAndRouge.GameSystem.CannonBall
         [OdinSerialize] int DestroyTriggerCount { get; set; } = 5;
         [OdinSerialize, ReadOnly] int WallHitCount { get; set; }
         [OdinSerialize] float Duration { get; set; } = 5f;
+        [OdinSerialize] GameObject HitParticle { get; set; }
 
         float m_TimeElapsed;
 
         void OnEnemyHit(GameObject enemy)
         {
-            var obj = FindObjectOfType<Cache.GameCache>();
-            obj.GetComponent<Cache.GameCache>().IncreaseScore(Holder, enemy.GetComponent<Enemy.Status>().Score);
+            var cache = FindObjectOfType<Cache.GameCache>();
+            if (cache == null) throw new System.Exception("GameCache could not be found.");
 
-            Destroy(enemy);
+            var status = enemy.GetComponent<Enemy.Status>();
+            if (status == null) throw new System.Exception("Enemy status could not be found.");
+
+            cache.IncreaseScore(Holder, status.Score);
+            enemy.GetComponent<Enemy.GetHitHandler>().GetHit(HitParticle);
         }
 
         void OnTrigger()

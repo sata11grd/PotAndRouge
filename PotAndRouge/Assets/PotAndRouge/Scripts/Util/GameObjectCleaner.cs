@@ -13,9 +13,9 @@ namespace PotAndRouge.Util
 {
     public class GameObjectCleaner : SerializedMonoBehaviour
     {
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collider)
         {
-            Destroy(collision.gameObject);
+            Destroy(collider.gameObject);
         }
     }
 }

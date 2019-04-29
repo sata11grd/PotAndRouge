@@ -13,8 +13,10 @@ namespace PotAndRouge.GameSystem.Enemy
 {
     public class GetHitHandler : SerializedMonoBehaviour
     {
-        public void GetHit()
+        public void GetHit(GameObject particle)
         {
+            var obj = Instantiate(particle);
+            obj.transform.position = transform.position;
             Destroy(gameObject);
         }
     }
