@@ -56,10 +56,12 @@ namespace PotAndRouge.GameSystem
             if (GameCache.Scores[PotInfo] > GameCache.Scores[RougeInfo])
             {
                 dollPosition.x = Rouge.position.x;
+                Rouge.gameObject.SetActive(false);
             }
             else
             {
                 dollPosition.x = Pot.position.x;
+                Pot.gameObject.SetActive(false);
             }
             Doll.position = dollPosition;
 
