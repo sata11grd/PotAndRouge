@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/PotAndRouge/Scenes/Initialization.unity
     guid: 3156de2b0659a1b4eabd9bf13b5400ef
   - enabled: 1
+    path: Assets/PotAndRouge/Scenes/Title.unity
+    guid: 15ae78c7795788a47ad25d8cc641e59c
+  - enabled: 1
     path: Assets/PotAndRouge/Scenes/Game.unity
     guid: 55f58c278fb0a5d49af8db7ba628ea29
   - enabled: 1
@@ -20,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/PotAndRouge/Scenes/Result.unity
     guid: 43f900e32d4981e47860426b4f96f2f7
-  - enabled: 1
-    path: Assets/PotAndRouge/Scenes/Title.unity
-    guid: 15ae78c7795788a47ad25d8cc641e59c
   m_configObjects: {}

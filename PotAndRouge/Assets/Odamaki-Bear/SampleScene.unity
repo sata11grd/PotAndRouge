@@ -394,7 +394,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
@@ -510,7 +510,6 @@ GameObject:
   - component: {fileID: 397408469}
   - component: {fileID: 397408471}
   - component: {fileID: 397408470}
-  - component: {fileID: 397408472}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -574,18 +573,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397408468}
   m_CullTransparentMesh: 0
---- !u!114 &397408472
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 397408468}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c31c4530efc1f045bb2d14a263a15fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &550840108
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,7 +848,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1313405961}
   - component: {fileID: 1313405962}
-  - component: {fileID: 1313405963}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -903,18 +889,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   val: 0
---- !u!114 &1313405963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313405960}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c31c4530efc1f045bb2d14a263a15fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1479595975
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +899,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1479595976}
   - component: {fileID: 1479595977}
-  - component: {fileID: 1479595978}
   m_Layer: 5
   m_Name: Credit
   m_TagString: Untagged
@@ -967,18 +940,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   val: 0
---- !u!114 &1479595978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1479595975}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c31c4530efc1f045bb2d14a263a15fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1760699501
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,7 +950,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1760699502}
   - component: {fileID: 1760699503}
-  - component: {fileID: 1760699504}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -1031,18 +991,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   val: 0
---- !u!114 &1760699504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760699501}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c31c4530efc1f045bb2d14a263a15fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1847164187
 GameObject:
   m_ObjectHideFlags: 0

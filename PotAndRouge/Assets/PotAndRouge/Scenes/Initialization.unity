@@ -169,7 +169,7 @@ MonoBehaviour:
       Data: true
     - Name: m_NextSceneName
       Entry: 1
-      Data: Prologue
+      Data: Title
 --- !u!4 &235185022
 Transform:
   m_ObjectHideFlags: 0
