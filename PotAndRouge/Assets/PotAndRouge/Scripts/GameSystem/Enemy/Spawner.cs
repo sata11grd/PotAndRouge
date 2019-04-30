@@ -14,7 +14,7 @@ namespace PotAndRouge.GameSystem.Enemy
     public class Spawner : SerializedMonoBehaviour
     {
         [OdinSerialize] float Interval { get; set; } = 2f;
-        [OdinSerialize] GameObject Spawnable { get; set; }
+        [OdinSerialize] List<GameObject> Spawnables { get; set; } = new List<GameObject>();
 
         List<Transform> SpawnPoints { get; set; } = new List<Transform>();
 
@@ -22,7 +22,8 @@ namespace PotAndRouge.GameSystem.Enemy
 
         void Spawn()
         {
-            var enemy = Instantiate(Spawnable);
+            int index = Random.Range(0, Spawnables.Count);
+            var enemy = Instantiate(Spawnables[index]);
             enemy.transform.parent = transform;
             enemy.transform.position = SpawnPoints[Random.Range(0, SpawnPoints.Count)].position;
         }
