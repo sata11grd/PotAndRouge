@@ -39,6 +39,14 @@ namespace PotAndRouge.GameSystem.Player
         [OdinSerialize] Transform CannonBallsRoot { get; set; }
         [OdinSerialize] GameObject CannonBall { get; set; }
 
+        [Title("SE")]
+        [OdinSerialize] Audio.SEPlayer SEPlayer { get; set; }
+        [OdinSerialize] AudioClip AudioClip1 { get; set; }
+        [OdinSerialize] AudioClip AudioClip2 { get; set; }
+        [OdinSerialize] float VolumeScale1 { get; set; } = 0.8f;
+        [OdinSerialize] float MinVolumeScale2 { get; set; } = 0.5f;
+        [OdinSerialize] float MaxVolumeScale2 { get; set; } = 0.8f;
+
         [Title("Read Only")]
         [OdinSerialize, ReadOnly] float m_RemainingShotCoolTime { get; set; }
         [OdinSerialize, ReadOnly] float m_ChargedTime { get; set; }
@@ -71,6 +79,9 @@ namespace PotAndRouge.GameSystem.Player
 
             if (Input.GetKeyUp(PlayerInfo.KeyConfig.ShotKey))
             {
+                SEPlayer.PlayOneShot(AudioClip1, VolumeScale1);
+                SEPlayer.PlayOneShot(AudioClip2, Mathf.Lerp(MinVolumeScale2, MaxVolumeScale2, m_ChargedTime / MaxChargeTime));
+
                 var obj = Instantiate(CannonBall);
                 obj.transform.position = transform.position;
                 obj.GetComponent<Rigidbody2D>().mass = Mathf.Lerp(MinMass, MaxMass, m_ChargedTime / MaxChargeTime);

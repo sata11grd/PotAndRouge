@@ -35,8 +35,15 @@ namespace PotAndRouge.GameSystem
         [OdinSerialize] DB.PlayerInfo PotInfo { get; set; }
         [OdinSerialize] DB.PlayerInfo RougeInfo { get; set; }
 
+        [OdinSerialize] Audio.BgmPlayer BgmPlayer { get; set; }
+        [OdinSerialize] Audio.SEPlayer SEPlayer { get; set; }
+        [OdinSerialize] AudioClip DoolAudioClip { get; set; }
+
         public void Terminate()
         {
+            BgmPlayer.Stop();
+            SEPlayer.PlayOneShot(DoolAudioClip);
+
             DefaultCamera.gameObject.SetActive(false);
             Shakable.gameObject.SetActive(true);
             Shakable.Shake(CameraShakeDuration, CameraShakeMagnitude);
@@ -62,10 +69,7 @@ namespace PotAndRouge.GameSystem
         IEnumerator SceneChangeCoroutine()
         {
             yield return new WaitForSeconds(SceneChangeDelay);
-            FindObjectOfType<GUI.FadeManager>().FadeOut(duration : FadeTime);
-            yield return new WaitForSeconds(FadeTime);
-            UnityEngine.SceneManagement.SceneManager.LoadScene(EpilogueScene);
-            FindObjectOfType<GUI.FadeManager>().FadeIn(duration : FadeTime);
+            FindObjectOfType<GUI.FadeManager>().LoadScene(FadeTime, EpilogueScene);
         }
     }
 }

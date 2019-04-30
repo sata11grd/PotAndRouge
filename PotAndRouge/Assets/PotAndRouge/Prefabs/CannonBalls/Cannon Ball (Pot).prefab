@@ -133,39 +133,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
+    SerializedFormat: 0
+    SerializedBytes: 0b0006000000486f6c646572000000000b000d00000053797374656d50726f66696c650100000017001300000044657374726f7954726967676572436f756e740a00000017000c00000057616c6c486974436f756e74000000001f00080000004475726174696f6e0000a0400b000b0000004869745061727469636c65020000000b000b0000005375625061727469636c65030000000b0009000000417564696f436c6970040000001f000b000000566f6c756d655363616c650000003f
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 9f709a6659c74c046a248d7bff33af42, type: 2}
     - {fileID: 11400000, guid: de823953aeb8f5449b52fda60c4c2948, type: 2}
     - {fileID: 1347330118340980, guid: a270d4b31a4d11a4b8302acf069f853a, type: 3}
     - {fileID: 1564421980168344, guid: 49c4f7c3ff489ac41bd6e80536ae23c5, type: 3}
+    - {fileID: 8300000, guid: c839fb5acc0c62b418ac70dad62a36bf, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: Holder
-      Entry: 10
-      Data: 0
-    - Name: SystemProfile
-      Entry: 10
-      Data: 1
-    - Name: DestroyTriggerCount
-      Entry: 3
-      Data: 10
-    - Name: WallHitCount
-      Entry: 3
-      Data: 0
-    - Name: Duration
-      Entry: 4
-      Data: 5
-    - Name: HitParticle
-      Entry: 10
-      Data: 2
-    - Name: SubParticle
-      Entry: 10
-      Data: 3
+    SerializationNodes: []
 --- !u!1001 &9135998808180993284
 PrefabInstance:
   m_ObjectHideFlags: 0

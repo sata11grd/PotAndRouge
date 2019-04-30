@@ -46,6 +46,11 @@ namespace PotAndRouge.GUI
             Fade(FADE_TYPE.FadeOut, color, duration);
         }
 
+        public void LoadScene(float duration, string nextScene)
+        {
+            StartCoroutine(LoadSceneCoroutine(duration, nextScene));
+        }
+
         void Fade(FADE_TYPE type, Color? color = null, float? duration = null)
         {
             m_FadeColor = color == null ? DefaultFadeColor : (Color)color;
@@ -102,6 +107,14 @@ namespace PotAndRouge.GUI
                         return timeElapsed / duration;
                 }
             }
+        }
+
+        IEnumerator LoadSceneCoroutine(float duration, string nextScene)
+        {
+            StartCoroutine(FadeCoroutine(duration, FADE_TYPE.FadeOut));
+            yield return new WaitForSeconds(duration);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(nextScene);
+            StartCoroutine(FadeCoroutine(duration, FADE_TYPE.FadeIn));
         }
     }
 }

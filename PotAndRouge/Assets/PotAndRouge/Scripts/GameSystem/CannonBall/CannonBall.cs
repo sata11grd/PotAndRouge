@@ -24,10 +24,17 @@ namespace PotAndRouge.GameSystem.CannonBall
         [OdinSerialize] GameObject HitParticle { get; set; }
         [OdinSerialize] GameObject SubParticle { get; set; }
 
+        [Title("SE")]
+        [OdinSerialize] AudioClip AudioClip { get; set; }
+        [OdinSerialize] float VolumeScale { get; set; } = 0.8f;
+
         float m_TimeElapsed;
 
         void OnEnemyHit(GameObject enemy)
         {
+            var sePlayer = FindObjectOfType<Audio.SEPlayer>();
+            sePlayer.PlayOneShot(AudioClip, VolumeScale);
+
             var cache = FindObjectOfType<Cache.GameCache>();
             if (cache == null) throw new System.Exception("GameCache could not be found.");
 

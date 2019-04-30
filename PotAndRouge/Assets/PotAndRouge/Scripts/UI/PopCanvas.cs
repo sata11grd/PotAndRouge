@@ -33,6 +33,12 @@ namespace PotAndRouge.UI
         [OdinSerialize] float TransitionTime { get; set; } = 0.3f;
         [OdinSerialize] float FloatingSpeed { get; set; } = 100f;
 
+        [Title("SE")]
+        [OdinSerialize] Audio.SEPlayer SEPlayer { get; set; }
+        [OdinSerialize] float VolumeScale { get; set; } = 0.8f;
+        [OdinSerialize] AudioClip AppearAudioClip { get; set; }
+        [OdinSerialize] AudioClip DisappearAudioClip { get; set; }
+
         [Title("Read Only")]
         [OdinSerialize, ReadOnly] POP_TYPE PopType { get; set; }
         [OdinSerialize, ReadOnly] Image BackgroundImage { get; set; }
@@ -41,6 +47,7 @@ namespace PotAndRouge.UI
         Vector3 InitialScale { get; set; }
         Vector3 InitialPosition { get; set; }
         RectTransform RectTransform { get; set; }
+        bool disappearSEPlayed { get; set; }
 
         Vector3 Lerp(Vector3 a, Vector3 b, float t)
         {
@@ -68,6 +75,9 @@ namespace PotAndRouge.UI
 
         private void OnEnable()
         {
+            disappearSEPlayed = false;
+            SEPlayer.PlayOneShot(AppearAudioClip, VolumeScale);
+
             TimeElapsed = 0f;
             InitialScale = RectTransform.localScale;
             InitialPosition = RectTransform.position;
@@ -126,6 +136,12 @@ namespace PotAndRouge.UI
             }
             else if (TimeElapsed <= TransitionTime + Duration + TransitionTime)
             {
+                if (!disappearSEPlayed)
+                {
+                    SEPlayer.PlayOneShot(DisappearAudioClip, VolumeScale);
+                    disappearSEPlayed = true;
+                }
+
                 var t = (TimeElapsed - TransitionTime - Duration) / TransitionTime;
                 RectTransform.position += new Vector3(0f, FloatingSpeed * Time.deltaTime, 0f);
 
