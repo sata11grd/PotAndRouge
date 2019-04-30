@@ -1,0 +1,7 @@
+■ キーバインドの変更
+・Assets/PotAndRouge/ScriptableObjects/Configs内のKeyConfigから変更できます。
+
+■ ゲーム画面でのポットとルージュの会話設定
+・Gameシーンを開き、ヒエラルキからManagersの子オブジェクトであるPop Managerを選択します。
+　PopDatasに要素を追加することで、会話を設定できます。
+
