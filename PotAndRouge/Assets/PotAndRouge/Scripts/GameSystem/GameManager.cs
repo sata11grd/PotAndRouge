@@ -28,7 +28,9 @@ namespace PotAndRouge.GameSystem
         [OdinSerialize] float DollYPosition { get; set; } = 0f;
         [OdinSerialize] Doll.Movable Movable { get; set; }
 
-        [OdinSerialize] GameObject EnemySpawner { get; set; }
+        [OdinSerialize] GameObject EnemySpawner1 { get; set; }
+        [OdinSerialize] GameObject EnemySpawner2 { get; set; }
+        [OdinSerialize] GameObject EnemySpawner3 { get; set; }
         [OdinSerialize] Transform Pot { get; set; }
         [OdinSerialize] Transform Rouge { get; set; }
         [OdinSerialize] Cache.GameCache GameCache { get; set; }
@@ -48,7 +50,9 @@ namespace PotAndRouge.GameSystem
             Shakable.gameObject.SetActive(true);
             Shakable.Shake(CameraShakeDuration, CameraShakeMagnitude);
 
-            EnemySpawner.gameObject.SetActive(false);
+            EnemySpawner1.gameObject.SetActive(false);
+            EnemySpawner2.gameObject.SetActive(false);
+            EnemySpawner3.gameObject.SetActive(false);
 
             Movable.enabled = false;
             var dollPosition = Doll.position;
